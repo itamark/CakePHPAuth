@@ -43,3 +43,5 @@ Set up the Database and users tabel by running this SQL:
           PRIMARY KEY (`id`)
         ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
+
+After creating your first user, you'll have to manually go in to the database and set `role` to `admin` to get access to admin rights.
