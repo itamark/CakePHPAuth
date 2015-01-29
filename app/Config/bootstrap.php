@@ -98,6 +98,9 @@ Configure::write('Dispatcher.filters', array(
 	'CacheDispatcher'
 ));
 
+App::uses('CakeEmail', 'Network/Email');
+
+
 /**
  * Configures default file logging options
  */
@@ -111,4 +114,14 @@ CakeLog::config('error', array(
 	'engine' => 'File',
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
+));
+
+/**
+ * Configure log to store edits in users
+ */
+CakeLog::config('users', array(
+	'engine' => 'FileLog',
+	'types' => array('info', 'errors', 'warning'),
+	'scopes' => array('users'),
+	'file' => 'users.log'
 ));
